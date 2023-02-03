@@ -26,33 +26,9 @@
     }
 
     //creazione oggetti
-    $porcoRosso = new Movie();
-    $principessaMononoke = new Movie();
-    $laCittaIncantata = new Movie();
-
-    //valori oggetto 1
-    $porcoRosso->titolo = 'PORCO ROSSO';
-    $porcoRosso->anno = '1992';
-    $porcoRosso->regista = 'Hayao Miyazaki';
-    $porcoRosso->genere = 'Animazione';
-    $porcoRosso->locandina = 'https://www.cinemadelsilenzio.it/images/film/poster/11167_big.jpg';
-    $porcoRosso->voto = '3.72';
-
-    //valori oggetto 2
-    $principessaMononoke->titolo = 'PRINCIPESSA MONONOKE';
-    $principessaMononoke->anno = '1997';
-    $principessaMononoke->regista = 'Hayao Miyazaki';
-    $principessaMononoke->genere = 'Animazione';
-    $principessaMononoke->locandina = 'https://pad.mymovies.it/filmclub/2005/11/052/locandina.jpg';
-    $principessaMononoke->voto = '4.27';
-
-    //valori oggetto 3
-    $laCittaIncantata->titolo = 'LA CITTA\' INCANTATA';
-    $laCittaIncantata->anno = '2001';
-    $laCittaIncantata->regista = 'Hayao Miyazaki';
-    $laCittaIncantata->genere = 'Animazione';
-    $laCittaIncantata->locandina = 'https://pad.mymovies.it/filmclub/2003/04/021/locandina.jpg';
-    $laCittaIncantata->voto = '4.35';
+    $porcoRosso = new Movie('PORCO ROSSO', '1992', 'Hayao Miyazaki', 'Animazione', 'https://www.cinemadelsilenzio.it/images/film/poster/11167_big.jpg', '3.72');
+    $principessaMononoke = new Movie('PRINCIPESSA MONONOKE', '1997', 'Hayao Miyazaki', 'Animazione', 'https://pad.mymovies.it/filmclub/2005/11/052/locandina.jpg', '4.27');
+    $laCittaIncantata = new Movie('LA CITTA\' INCANTATA', '2001', 'Hayao Miyazaki', 'Animazione', 'https://pad.mymovies.it/filmclub/2003/04/021/locandina.jpg', '4.35');
 
 ?>
 
@@ -65,21 +41,26 @@
     <title>PHP OOP</title>
     <!--bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     
     <div class="container">
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-4">
 
-                <div class="card">
+                <div class="card text-center">
 
-                    <h1><?php echo $porcoRosso->titolo; ?></h1>
+                    <div class="title">
+                        <h1><?php echo $porcoRosso->titolo; ?></h1>
+                    </div>
                     <img src="<?php echo $porcoRosso->locandina; ?>" alt="locandina">
-                    <p><?php echo $porcoRosso->anno; ?></p>
-                    <p><?php echo $porcoRosso->regista; ?></p>
-                    <p><?php echo $porcoRosso->genere; ?></p>
-                    <p><?php echo $porcoRosso->getVoto(); ?></p>
+                    <div class="mt-3">
+                        <p><?php echo $porcoRosso->anno; ?></p>
+                        <p><?php echo $porcoRosso->regista; ?></p>
+                        <p><?php echo $porcoRosso->genere; ?></p>
+                        <p><?php echo $porcoRosso->getVoto(); ?></p>
+                    </div>
 
                 </div>
 
@@ -87,9 +68,18 @@
 
             <div class="col-4">
 
-                <div class="card">
+                <div class="card text-center">
 
-                    //
+                    <div class="title">
+                        <h1><?php echo $principessaMononoke->titolo; ?></h1>
+                    </div>
+                    <img src="<?php echo $principessaMononoke->locandina; ?>" alt="locandina">
+                    <div class="mt-3">
+                        <p><?php echo $principessaMononoke->anno; ?></p>
+                        <p><?php echo $principessaMononoke->regista; ?></p>
+                        <p><?php echo $principessaMononoke->genere; ?></p>
+                        <p><?php echo $principessaMononoke->getVoto(); ?></p>
+                    </div>
 
                 </div>
 
@@ -97,9 +87,18 @@
 
             <div class="col-4">
 
-                <div class="card">
+                <div class="card text-center">
 
-                    //
+                    <div class="title">
+                        <h1><?php echo $laCittaIncantata->titolo; ?></h1>
+                    </div>
+                    <img src="<?php echo $laCittaIncantata->locandina; ?>" alt="locandina">
+                    <div class="mt-3">
+                        <p><?php echo $laCittaIncantata->anno; ?></p>
+                        <p><?php echo $laCittaIncantata->regista; ?></p>
+                        <p><?php echo $laCittaIncantata->genere; ?></p>
+                        <p><?php echo $laCittaIncantata->getVoto(); ?></p>
+                    </div>
 
                 </div>
 
