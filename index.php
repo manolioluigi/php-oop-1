@@ -54,7 +54,6 @@
     $laCittaIncantata -> locandina = 'https://pad.mymovies.it/filmclub/2003/04/021/locandina.jpg';
     $laCittaIncantata -> voto = '4.35';
 
-
 ?>
 
 <!DOCTYPE html>
@@ -90,7 +89,7 @@
 
                 <div class="card">
 
-                    
+                    //
 
                 </div>
 
@@ -100,7 +99,7 @@
 
                 <div class="card">
 
-                    
+                    //
 
                 </div>
 
