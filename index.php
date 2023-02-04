@@ -8,14 +8,16 @@
         public $regista;
         public $genere;
         public $locandina;
+        public $durata;
         public $voto;
 
-        function __construct($titoloFilm, $annoFilm, $registaFilm, $genereFilm, $locandinaFilm, $votoFilm){
+        function __construct($titoloFilm, $annoFilm, $registaFilm, $genereFilm, $locandinaFilm, $durataFilm, $votoFilm){
             $this->titolo = $titoloFilm;
             $this->anno = $annoFilm;
             $this->regista = $registaFilm;
             $this->genere = $genereFilm;
             $this->locandina = $locandinaFilm;
+            $this->durata = $durataFilm;
             $this->voto = $votoFilm;
         }
 
@@ -26,9 +28,9 @@
     }
 
     //creazione oggetti
-    $porcoRosso = new Movie('PORCO ROSSO', '1992', 'Hayao Miyazaki', 'Animazione', 'https://www.cinemadelsilenzio.it/images/film/poster/11167_big.jpg', '3.72');
-    $principessaMononoke = new Movie('PRINCIPESSA MONONOKE', '1997', 'Hayao Miyazaki', 'Animazione', 'https://pad.mymovies.it/filmclub/2005/11/052/locandina.jpg', '4.27');
-    $laCittaIncantata = new Movie('LA CITTA\' INCANTATA', '2001', 'Hayao Miyazaki', 'Animazione', 'https://pad.mymovies.it/filmclub/2003/04/021/locandina.jpg', '4.35');
+    $porcoRosso = new Movie('PORCO ROSSO', '1992', 'Hayao Miyazaki', 'Animazione', 'https://www.cinemadelsilenzio.it/images/film/poster/11167_big.jpg', '94 minuti', '3.72');
+    $principessaMononoke = new Movie('PRINCIPESSA MONONOKE', '1997', 'Hayao Miyazaki', 'Animazione', 'https://pad.mymovies.it/filmclub/2005/11/052/locandina.jpg', '133 minuti', '4.27');
+    $laCittaIncantata = new Movie('LA CITTA\' INCANTATA', '2001', 'Hayao Miyazaki', 'Animazione', 'https://pad.mymovies.it/filmclub/2003/04/021/locandina.jpg', '125 minuti', '4.35');
 
 ?>
 
@@ -59,6 +61,7 @@
                         <p><?php echo $porcoRosso->anno; ?></p>
                         <p><?php echo $porcoRosso->regista; ?></p>
                         <p><?php echo $porcoRosso->genere; ?></p>
+                        <p><?php echo $porcoRosso->durata; ?></p>
                         <p><?php echo $porcoRosso->getVoto(); ?></p>
                     </div>
 
@@ -78,6 +81,7 @@
                         <p><?php echo $principessaMononoke->anno; ?></p>
                         <p><?php echo $principessaMononoke->regista; ?></p>
                         <p><?php echo $principessaMononoke->genere; ?></p>
+                        <p><?php echo $principessaMononoke->durata; ?></p>
                         <p><?php echo $principessaMononoke->getVoto(); ?></p>
                     </div>
 
@@ -97,6 +101,7 @@
                         <p><?php echo $laCittaIncantata->anno; ?></p>
                         <p><?php echo $laCittaIncantata->regista; ?></p>
                         <p><?php echo $laCittaIncantata->genere; ?></p>
+                        <p><?php echo $laCittaIncantata->durata; ?></p>
                         <p><?php echo $laCittaIncantata->getVoto(); ?></p>
                     </div>
 
